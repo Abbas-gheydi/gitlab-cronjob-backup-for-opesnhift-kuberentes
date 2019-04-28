@@ -28,4 +28,4 @@ oc create -f git-backup-to-gdrive.yaml -n gitlab .
 
 and follow thist git repo .   
 
-https://gist.github.com/cuongtransc/4f394e313394a94d797efbc341809c35
+https://github.com/Syonet/gitlab-backup-uploader
