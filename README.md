@@ -4,7 +4,7 @@ first of all:
 my default path for google drive binary is:
 /gdrive-backup/gdrive/
 
-my gitlab deployment has lable of deploymentconfig=gitlab-ce
+my gitlab deployment has lable of deploymentconfig=gitlab-ce in gitlab namespace
 
 you can change these valuse in yaml files.
 
@@ -13,7 +13,7 @@ you can change these valuse in yaml files.
 first create a service account in gitlab project (namespace) , this service account should have right permission to execute commands inside pods.
 
 in openshift: ```oc create sa 4kubectl -n gitlab```   
-in kubernetes: ```kubectl create sa 4kubectl```   
+in kubernetes: ```kubectl create sa 4kubectl -n gitlab ```   
 
 then set edit permission for this account   
 ```oadm policy add-role-to-user edit 4kubectl```   
