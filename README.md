@@ -12,19 +12,19 @@ you can change these valuse in yaml files.
 
 first create a service account in gitlab project (namespace) , this service account should have right permission to execute commands inside pods.
 
-in openshift: oc create sa 4kubectl -n gitlab   
-in kubernetes: kubectl create sa 4kubectl   
+in openshift: ```oc create sa 4kubectl -n gitlab```   
+in kubernetes: ```kubectl create sa 4kubectl```   
 
 then set edit permission for this account   
-oadm policy add-role-to-user edit 4kubectl   
-
-oc create -f git-backup-to-local.yaml -n gitlab   
+```oadm policy add-role-to-user edit 4kubectl```   
+and create cronjob for create backup automatically.
+```oc create -f git-backup-to-local.yaml -n gitlab ```  
 
 
 to create a copy for local backup to google drive add this cronjob .  
 
 
-oc create -f git-backup-to-gdrive.yaml -n gitlab  
+```oc create -f git-backup-to-gdrive.yaml -n gitlab ``` 
 
 and follow thist git repo    
 
