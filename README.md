@@ -1,4 +1,4 @@
-backup from gitlab hosted on openshift or kuberentes .  
+backup from gitlab hosted on openshift or kuberentes to local drive and google drive.  
 
 first of all:   
 my default path for google drive binary is:
