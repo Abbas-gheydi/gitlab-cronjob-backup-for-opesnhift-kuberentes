@@ -17,7 +17,7 @@ in kubernetes: ```kubectl create sa 4kubectl -n gitlab ```
 
 then set edit permission for this account   
 ```oadm policy add-role-to-user edit 4kubectl```   
-and create cronjob for create backup automatically.
+and create cronjob for create backup automatically.   
 ```oc create -f git-backup-to-local.yaml -n gitlab ```  
 
 
