@@ -1,6 +1,6 @@
-backup from gitlab hosted on openshift or kuberentes.
+backup from gitlab hosted on openshift or kuberentes .  
 
-first of all:
+first of all:   
 my default path for google drive binary is:
 /gdrive-backup/gdrive/
 
@@ -12,20 +12,20 @@ you can change these valuse in yaml files.
 
 first create a service account in gitlab project (namespace) , this service account should have right permission to execute commands inside pods.
 
-in openshift: oc create sa 4kubectl -n gitlab
-in kubernetes: kubectl create sa 4kubectl
+in openshift: oc create sa 4kubectl -n gitlab .  
+in kubernetes: kubectl create sa 4kubectl .  
 
-then set edit permission for this account 
-oadm policy add-role-to-user edit 4kubectl
+then set edit permission for this account .  
+oadm policy add-role-to-user edit 4kubectl .  
 
-oc create -f git-backup-to-local.yaml -n gitlab
-
-
-to create a copy for local backup to google drive add this cronjob
+oc create -f git-backup-to-local.yaml -n gitlab .  
 
 
-oc create -f git-backup-to-gdrive.yaml -n gitlab
+to create a copy for local backup to google drive add this cronjob .  
 
-and follow thist git repo 
+
+oc create -f git-backup-to-gdrive.yaml -n gitlab .  
+
+and follow thist git repo .   
 
 https://gist.github.com/cuongtransc/4f394e313394a94d797efbc341809c35
